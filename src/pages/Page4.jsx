@@ -1,0 +1,46 @@
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const Page4 = () => {
+  
+ useGSAP(function(){
+  gsap.from('.bottom',{
+    y: 50,
+      opacity: 0,
+      duration:1,
+      delay:0.5,
+      scrollTrigger: {
+        trigger: '.bH1',
+        markers: false,
+        start: "top 40%",    // Start animation when top of .section4 is 80% down the viewport
+        end: "top 30%",      // End animation when top of .section4 is 40% down the viewport
+        scrub: 1,
+        once:true
+    }
+  })
+ })
+
+  return (
+    <div className='section4 bg-white h-screen p-5 relative'>
+      <div className='h-[49vw] w-full rounded-[50px] bg-[url(https://static.wixstatic.com/media/f1c650_1baf8f9dcad444669565ec73ee697a92~mv2.jpg/v1/fill/w_1865,h_953,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Background%20Anzo_Studio.jpg)]'>
+
+        <div className='left text-white font-[anzo5] text-[20vw] leading-[16vw] p-[4.5vw] tracking-wide'>
+          <h1 className='text-[#9B9B9B]'>WHAT</h1>
+          <h1 className='bH1'>I DO</h1>
+        </div>
+
+        <div className='bottom text-[1.3vw] text-white pl-[4vw] leading-[1.75vw]'>
+          <h4 className='font-[anzo4]'>I DESIGN AND DEVELOP</h4>
+          <h4 className='font-[anzo3] text-gray-400'>MODERN, IMPACTFUL AND LUXURIOUS</h4>
+          <h5 className='font-[anzo4]'>websites that seamlessly bridge your goals with needs of your clients</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page4;
