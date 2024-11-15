@@ -8,25 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 const Page4 = () => {
   
  useGSAP(function(){
-  gsap.from('.bottom',{
-    y: 50,
-      opacity: 0,
-      duration:1,
-      delay:0.5,
-      scrollTrigger: {
-        trigger: '.bH1',
-        markers: false,
-        start: "top 40%",    // Start animation when top of .section4 is 80% down the viewport
-        end: "top 30%",      // End animation when top of .section4 is 40% down the viewport
-        scrub: 1,
-        once:true
-    }
-  })
+  if(window.innerWidth>768){
+    gsap.from('.bottom',{
+      y: 50,
+        opacity: 0,
+        duration:1,
+        delay:0.5,
+        scrollTrigger: {
+          trigger: '.bH1',
+          markers: false,
+          start: "top 40%",    // Start animation when top of .section4 is 80% down the viewport
+          end: "top 30%",      // End animation when top of .section4 is 40% down the viewport
+          scrub: 1,
+          once:true
+      }
+    })
+  }
  })
 
   return (
-    <div className='section4 bg-white h-screen p-5 relative'>
-      <div className='h-[49vw] w-full rounded-[50px] bg-[url(https://static.wixstatic.com/media/f1c650_1baf8f9dcad444669565ec73ee697a92~mv2.jpg/v1/fill/w_1865,h_953,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Background%20Anzo_Studio.jpg)]'>
+    <div className='section4 bg-white max-md:h-[70vw] h-screen p-5 relative'>
+      <div className='h-[49vw] w-full rounded-[50px] max-md:rounded-[30px] bg-[url(https://static.wixstatic.com/media/f1c650_1baf8f9dcad444669565ec73ee697a92~mv2.jpg/v1/fill/w_1865,h_953,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Background%20Anzo_Studio.jpg)]'>
 
         <div className='left text-white font-[anzo5] text-[20vw] leading-[16vw] p-[4.5vw] tracking-wide'>
           <h1 className='text-[#9B9B9B]'>WHAT</h1>

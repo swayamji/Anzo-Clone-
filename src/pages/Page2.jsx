@@ -59,7 +59,7 @@ const Page2 = () => {
 
   return (
     <div className='section2 bg-white text-center p-16 max-md:p-8  text-black overflow-x-hidden'>
-        <h3 className='text-gray-500 font-[anzo3] text-[1.3vw] max-md:text-[3vw] max-md:mt-[-9vw]'>©  anzo.studio 2024 | designed and developed</h3>
+        <h3 className='text-gray-500 font-[anzo3] text-[1.3vw] max-md:text-[3vw]'>©  anzo.studio 2024 | designed and developed</h3>
 
         <div className='same mt-[6vw] max-md:mt-[12vw]'>
             <h2 className=' text-[40vw] leading-[35vw] font-[anzo5]'>IMPACTFUL</h2>
